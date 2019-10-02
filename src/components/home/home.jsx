@@ -9,7 +9,9 @@ class Home extends Component {
         <Col className='text-center'>
           <h1>CityPop</h1>
           <div class='buttons'>
-            <Button size='lg'>Search by city</Button>
+            <Button href='/city' size='lg'>
+              Search by city
+            </Button>
             <Button size='lg'>Search by country</Button>
           </div>
         </Col>
