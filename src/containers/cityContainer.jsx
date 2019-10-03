@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { getCity } from '../services/cityService';
 import CitySearch from '../components/citySearch/citySearch';
 
 class CityContainer extends Component {

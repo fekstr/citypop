@@ -2,9 +2,9 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 import './App.css';
-import Home from './components/home/home';
+import Home from './components/Home/home';
 import CityContainer from './containers/cityContainer';
-import SearchContainer from './containers/searchContainer';
+import SearchContainer from './containers/searchContainer/searchContainer';
 
 function App() {
   return (

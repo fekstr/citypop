@@ -59,6 +59,7 @@ function getCityData(geonames) {
   let city;
   for (let i = 0; i < citiesFullInfo.length; i++) {
     city = {
+      id: i,
       name: citiesFullInfo[i].name,
       population: citiesFullInfo[i].population,
       country: citiesFullInfo[i].countryName,
