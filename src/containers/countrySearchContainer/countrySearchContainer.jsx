@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import CitySearch from '../components/citySearch/citySearch';
+import Search from '../../components/search/search';
 
-class CityContainer extends Component {
+class CountrySearchContainer extends Component {
   state = {
     searchQuery: '',
     result: {},
@@ -12,20 +12,22 @@ class CityContainer extends Component {
   };
 
   submitSearch = async () => {
-    this.props.history.push('/search?q=' + this.state.searchQuery);
+    this.props.history.push('/country/search?q=' + this.state.searchQuery);
     // const result = await getCity(this.state.searchQuery);
     // this.setState({ result });
   };
 
   render() {
     return (
-      <CitySearch
+      <Search
         searchQuery={this.state.searchQuery}
         handleSearch={this.handleSearch}
         submitSearch={this.submitSearch}
+        label='Search by country'
+        placeholder='Enter a country...'
       />
     );
   }
 }
 
-export default CityContainer;
+export default CountrySearchContainer;

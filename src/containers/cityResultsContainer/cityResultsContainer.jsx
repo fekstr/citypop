@@ -4,9 +4,9 @@ import { Row, Col } from 'react-bootstrap';
 import List from '../../components/common/List/list';
 import queryString from 'query-string';
 import _ from 'lodash';
-import './searchContainer.css';
+import './cityResultsContainer.css';
 
-class SearchContainer extends Component {
+class CityResultsContainer extends Component {
   state = {
     result: {},
   };
@@ -50,4 +50,4 @@ class SearchContainer extends Component {
   }
 }
 
-export default SearchContainer;
+export default CityResultsContainer;
