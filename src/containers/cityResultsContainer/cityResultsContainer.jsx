@@ -47,8 +47,6 @@ class CityResultsContainer extends Component {
       };
     });
 
-    console.log(items);
-
     return (
       <React.Fragment>
         <div className='header'>

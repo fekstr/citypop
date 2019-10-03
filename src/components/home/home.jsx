@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Row, Col, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './home.css';
 
 class Home extends Component {
@@ -10,12 +11,14 @@ class Home extends Component {
           <Col className='text-center'>
             <h1>CityPop</h1>
             <div className='buttons'>
-              <Button href='/city' size='lg'>
-                Search by city
-              </Button>
-              <Button href='/country' size='lg'>
-                Search by country
-              </Button>
+              <Link to='/city'>
+                <Button size='lg'>Search by city</Button>
+              </Link>
+              <Link to='/country'>
+                <Button href='/country' size='lg'>
+                  Search by country
+                </Button>
+              </Link>
             </div>
           </Col>
         </Row>
