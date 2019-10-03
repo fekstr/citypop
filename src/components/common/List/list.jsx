@@ -3,7 +3,6 @@ import ListItem from './ListItem/listItem';
 
 const List = props => {
   const { items } = props;
-  console.log(items);
 
   return (
     <ul>

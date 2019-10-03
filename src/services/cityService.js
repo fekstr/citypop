@@ -6,9 +6,7 @@ export async function getCities(cityName) {
   const cityEndpoint = `/searchJSON?name_equals=${cityName}&cities=cities500&orderby=population&username=weknowit`;
 
   const response = await http.get(cityEndpoint);
-  console.log(response);
   const cities = getCityData(response.data.geonames);
-  console.log(cities);
   if (cities.length > 0) return cities;
   return 'Not found';
 }
@@ -17,7 +15,6 @@ export async function getCityById(geonameId) {
   if (!geonameId) return;
   const cityEndpoint = `/getJSON?geonameId=${geonameId}&username=weknowit`;
   const response = await http.get(cityEndpoint);
-  console.log(response);
   const data = getCityData([response.data]);
   return data[0];
 }
