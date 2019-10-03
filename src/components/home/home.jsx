@@ -7,7 +7,7 @@ class Home extends Component {
   render() {
     return (
       <div className='home'>
-        <Row className='h-100'>
+        <Row>
           <Col className='text-center'>
             <div className='buttons'>
               <Link to='/city'>

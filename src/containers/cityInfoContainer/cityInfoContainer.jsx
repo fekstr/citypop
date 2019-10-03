@@ -18,7 +18,7 @@ class CityInfoContainer extends Component {
     const { city } = this.state;
 
     return (
-      <Row className='h-100 justify-content-center'>
+      <Row className='justify-content-center'>
         <Col xs='12' lg='8' className='text-center'>
           {!_.isEmpty(city) ? (
             <React.Fragment>
