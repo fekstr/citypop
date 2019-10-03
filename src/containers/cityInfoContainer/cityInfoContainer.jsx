@@ -10,9 +10,7 @@ class CityInfoContainer extends Component {
   };
 
   async componentDidMount() {
-    console.log(this.props.match.params.id);
     const city = await getCityById(this.props.match.params.id);
-    console.log(city);
     this.setState({ city });
   }
 

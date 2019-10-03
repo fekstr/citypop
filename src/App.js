@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { Container, Row } from 'react-bootstrap';
-import Home from './components/Home/home';
+import Home from './components/home/home';
 import CitySearchContainer from './containers/citySearchContainer/citySearchContainer';
 import CityInfoContainer from './containers/cityInfoContainer/cityInfoContainer';
 import CityResultsContainer from './containers/cityResultsContainer/cityResultsContainer';

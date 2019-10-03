@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SearchBox = ({ value, onChange, placeholder }) => {
+const SearchBox = ({ value, onChange, onKeyPress, placeholder }) => {
   return (
     <input
       type='text'
@@ -9,6 +9,7 @@ const SearchBox = ({ value, onChange, placeholder }) => {
       placeholder={placeholder}
       value={value}
       onChange={e => onChange(e.currentTarget.value)}
+      onKeyPress={e => onKeyPress(e.key)}
     />
   );
 };

@@ -13,8 +13,10 @@ class CitySearchContainer extends Component {
 
   submitSearch = async () => {
     this.props.history.push('/city/search?q=' + this.state.searchQuery);
-    // const result = await getCity(this.state.searchQuery);
-    // this.setState({ result });
+  };
+
+  handleKeyPress = key => {
+    if (key === 'Enter') this.submitSearch();
   };
 
   render() {
@@ -22,6 +24,7 @@ class CitySearchContainer extends Component {
       <Search
         searchQuery={this.state.searchQuery}
         handleSearch={this.handleSearch}
+        handleKeyPress={this.handleKeyPress}
         submitSearch={this.submitSearch}
         label='Search by city'
         placeholder='Enter a city...'
