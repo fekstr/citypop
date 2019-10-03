@@ -21,7 +21,7 @@ class SearchContainer extends Component {
     return (
       <div className='searchContainer'>
         <Row className='justify-content-center'>
-          <Col xs='12' className='text-center'>
+          <Col xs='12' lg='10' className='text-center'>
             <div className='header'>
               <h1>Search results</h1>
             </div>
@@ -33,8 +33,15 @@ class SearchContainer extends Component {
   }
 
   renderList() {
+    console.log(this.state.result);
     const items = this.state.result.map(city => {
-      return { id: city.id, head: city.name, sub1: city.province, sub2: city.country };
+      return {
+        key: city.geonameId,
+        link: `/city/${city.geonameId}`,
+        head: city.name,
+        sub1: city.province,
+        sub2: city.country,
+      };
     });
 
     console.log(items);

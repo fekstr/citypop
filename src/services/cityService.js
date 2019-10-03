@@ -1,7 +1,7 @@
 import http from './httpService';
 
 const apiEndpoint = '/searchJSON?name_equals=';
-const suffix = '&username=weknowit';
+const suffix = '&orderby=population&username=weknowit';
 
 function cityUrl(cityName) {
   return apiEndpoint + cityName + suffix;
@@ -13,6 +13,13 @@ export async function getCities(cityName) {
   console.log(response);
   const cities = getCityData(response.data.geonames);
   return cities;
+}
+
+export async function getCityById(geonameId) {
+  if (!geonameId) return;
+  const apiEndpoint = `/getJSON?geonameId=${geonameid}&username=weknowit`;
+  const response = await http.get(apiEndpoint);
+  console.log(response);
 }
 
 function findCities(geonames) {
@@ -32,17 +39,7 @@ function findCities(geonames) {
 }
 
 function removeDuplicateCities(cities) {
-  const uniqueCities = cities.filter(
-    (city, index) =>
-      index ===
-      cities.findIndex(
-        c =>
-          c.name === city.name &&
-          c.population === city.population &&
-          c.country === city.country &&
-          c.province === city.province
-      )
-  );
+  const uniqueCities = cities.filter((city, index) => index === cities.findIndex(c => c.geonameId === city.geonameId));
 
   console.log(uniqueCities);
 
@@ -59,7 +56,7 @@ function getCityData(geonames) {
   let city;
   for (let i = 0; i < citiesFullInfo.length; i++) {
     city = {
-      id: i,
+      geonameId: citiesFullInfo[i].geonameId,
       name: citiesFullInfo[i].name,
       population: citiesFullInfo[i].population,
       country: citiesFullInfo[i].countryName,
