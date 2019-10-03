@@ -7,12 +7,13 @@ const Search = props => {
   const { searchQuery, handleSearch, submitSearch, label, placeholder } = props;
 
   return (
-    <Row className='h-100'>
-      <Col className='text-center'>
-        <h1>CityPop</h1>
-        <h3>{label}</h3>
-        <SearchBox value={searchQuery} onChange={handleSearch} placeholder={placeholder} />
-        <Button onClick={submitSearch}>Search</Button>
+    <Row className='h-100 d-flex justify-content-center'>
+      <Col xs='12' lg='6' className='text-center'>
+        <div className='search'>
+          <h3>{label}</h3>
+          <SearchBox value={searchQuery} onChange={handleSearch} placeholder={placeholder} />
+          <Button onClick={submitSearch}>Search</Button>
+        </div>
       </Col>
     </Row>
   );

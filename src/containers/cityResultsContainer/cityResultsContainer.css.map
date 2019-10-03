@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AACE,qBADmB,CACnB,OAAO,CAAC;EACN,UAAU,EAAE,GAAG;EACf,aAAa,EAAE,GAAG;CACnB;;AAJH,AAME,qBANmB,CAMnB,QAAQ,CAAC;EACP,UAAU,EAAE,GAAG;CAChB",
+    "mappings": "AAAA,AACE,qBADmB,CACnB,cAAc,CAAC;EACb,aAAa,EAAE,GAAG;CACnB",
     "sources": [
         "cityResultsContainer.scss"
     ],

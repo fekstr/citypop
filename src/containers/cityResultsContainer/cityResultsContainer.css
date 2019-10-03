@@ -1,9 +1,4 @@
-.cityResultsContainer .header {
-  margin-top: 10%;
-  margin-bottom: 2em;
-}
-
-.cityResultsContainer .spinner {
-  margin-top: 20%;
+.cityResultsContainer .search-header {
+  margin-bottom: 3em;
 }
 /*# sourceMappingURL=cityResultsContainer.css.map */

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { Container } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import './App.css';
 import Home from './components/Home/home';
 import CitySearchContainer from './containers/citySearchContainer/citySearchContainer';
@@ -12,6 +12,9 @@ import CountryResultsContainer from './containers/countryResultsContainer/countr
 function App() {
   return (
     <Container className='h-100'>
+      <Row className='justify-content-center'>
+        <h1 className='header'>CityPop</h1>
+      </Row>
       <Switch>
         <Route path='/city/search' component={CityResultsContainer} />
         <Route path='/city/:id' component={CityInfoContainer} />

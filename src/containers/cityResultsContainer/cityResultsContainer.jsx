@@ -49,8 +49,8 @@ class CityResultsContainer extends Component {
 
     return (
       <React.Fragment>
-        <div className='header'>
-          <h1>Search results</h1>
+        <div className='search-header'>
+          <h2>Results for '{this.state.result[0].name}'</h2>
         </div>
         <List items={items} />
       </React.Fragment>

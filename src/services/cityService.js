@@ -8,6 +8,7 @@ export async function getCities(cityName) {
   const response = await http.get(cityEndpoint);
   console.log(response);
   const cities = getCityData(response.data.geonames);
+  console.log(cities);
   return cities;
 }
 

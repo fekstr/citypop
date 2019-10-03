@@ -13,8 +13,6 @@ class CountrySearchContainer extends Component {
 
   submitSearch = async () => {
     this.props.history.push('/country/search?q=' + this.state.searchQuery);
-    // const result = await getCity(this.state.searchQuery);
-    // this.setState({ result });
   };
 
   render() {
