@@ -5,12 +5,13 @@ import './App.css';
 import Home from './components/Home/home';
 import CityContainer from './containers/cityContainer';
 import SearchContainer from './containers/searchContainer/searchContainer';
+import CityInfoContainer from './containers/cityInfoContainer/cityInfoContainer';
 
 function App() {
   return (
     <Container className='h-100'>
       <Switch>
-        <Route path='/city/:id' component={CityInfo} />
+        <Route path='/city/:id' component={CityInfoContainer} />
         <Route path='/search' component={SearchContainer} />
         <Route path='/city' component={CityContainer} />
         {/* <Route path='/country/:id' component={CountryData} />

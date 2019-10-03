@@ -17,9 +17,10 @@ export async function getCities(cityName) {
 
 export async function getCityById(geonameId) {
   if (!geonameId) return;
-  const apiEndpoint = `/getJSON?geonameId=${geonameid}&username=weknowit`;
+  const apiEndpoint = `/getJSON?geonameId=${geonameId}&username=weknowit`;
   const response = await http.get(apiEndpoint);
-  console.log(response);
+  const data = getCityData([response.data]);
+  return data[0];
 }
 
 function findCities(geonames) {
