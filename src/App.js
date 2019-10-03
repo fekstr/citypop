@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import { Container, Row } from 'react-bootstrap';
 import Home from './components/home/home';
 import CitySearchContainer from './containers/citySearchContainer/citySearchContainer';
@@ -7,6 +7,7 @@ import CityInfoContainer from './containers/cityInfoContainer/cityInfoContainer'
 import CityResultsContainer from './containers/cityResultsContainer/cityResultsContainer';
 import CountrySearchContainer from './containers/countrySearchContainer/countrySearchContainer';
 import CountryResultsContainer from './containers/countryResultsContainer/countryResultsContainer';
+import NotFound from './components/notFound/notFound';
 import './App.css';
 
 function App() {
@@ -21,8 +22,9 @@ function App() {
         <Route path='/city' component={CitySearchContainer} />
         <Route path='/country/search' component={CountryResultsContainer} />
         <Route path='/country' component={CountrySearchContainer} />
-        {/* <Route path='/not-found' component={NotFound} /> */}
+        <Route path='/not-found' component={NotFound} />
         <Route exact path='/' component={Home} />
+        <Redirect to='/not-found' />
       </Switch>
     </Container>
   );

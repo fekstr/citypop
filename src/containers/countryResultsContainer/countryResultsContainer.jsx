@@ -48,7 +48,7 @@ class CountryResultsContainer extends Component {
       return (
         <React.Fragment>
           <h3 className='mb-4'>No country found for '{query}'</h3>
-          <Link to='/city'>
+          <Link to='/country'>
             <Button size='lg'>Back to search</Button>
           </Link>
         </React.Fragment>
