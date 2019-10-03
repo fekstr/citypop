@@ -1,5 +1,9 @@
-.searchContainer .header {
+.cityResultsContainer .header {
   margin-top: 10%;
   margin-bottom: 2em;
+}
+
+.cityResultsContainer .spinner {
+  margin-top: 20%;
 }
 /*# sourceMappingURL=cityResultsContainer.css.map */

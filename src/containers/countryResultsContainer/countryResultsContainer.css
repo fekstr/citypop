@@ -1,5 +1,9 @@
-.searchContainer .header {
+.countryResultsContainer .header {
   margin-top: 10%;
   margin-bottom: 2em;
+}
+
+.countryResultsContainer .spinner {
+  margin-top: 20%;
 }
 /*# sourceMappingURL=countryResultsContainer.css.map */

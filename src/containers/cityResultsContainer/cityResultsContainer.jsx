@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { getCities } from '../../services/cityService';
 import { Row, Col } from 'react-bootstrap';
+import { ClipLoader } from 'react-spinners';
 import List from '../../components/common/List/list';
 import queryString from 'query-string';
 import _ from 'lodash';
@@ -19,13 +20,16 @@ class CityResultsContainer extends Component {
 
   render() {
     return (
-      <div className='searchContainer'>
+      <div className='cityResultsContainer'>
         <Row className='justify-content-center'>
           <Col xs='12' lg='10' className='text-center'>
-            <div className='header'>
-              <h1>Search results</h1>
-            </div>
-            {!_.isEmpty(this.state.result) && this.renderList()}
+            {!_.isEmpty(this.state.result) ? (
+              this.renderList()
+            ) : (
+              <div className='spinner'>
+                <ClipLoader sizeUnit={'px'} size={100} color={'#123abc'} loading={_.isEmpty(this.state.result)} />
+              </div>
+            )}
           </Col>
         </Row>
       </div>
@@ -33,7 +37,6 @@ class CityResultsContainer extends Component {
   }
 
   renderList() {
-    console.log(this.state.result);
     const items = this.state.result.map(city => {
       return {
         key: city.geonameId,
@@ -46,7 +49,14 @@ class CityResultsContainer extends Component {
 
     console.log(items);
 
-    return <List items={items} />;
+    return (
+      <React.Fragment>
+        <div className='header'>
+          <h1>Search results</h1>
+        </div>
+        <List items={items} />
+      </React.Fragment>
+    );
   }
 }
 
