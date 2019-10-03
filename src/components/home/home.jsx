@@ -14,9 +14,7 @@ class Home extends Component {
                 <Button size='lg'>Search by city</Button>
               </Link>
               <Link to='/country'>
-                <Button href='/country' size='lg'>
-                  Search by country
-                </Button>
+                <Button size='lg'>Search by country</Button>
               </Link>
             </div>
           </Col>

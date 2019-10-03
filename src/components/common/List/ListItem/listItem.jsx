@@ -1,13 +1,13 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './listItem.css';
 
 const ListItem = props => {
   const { head, sub1, sub2, link } = props;
 
   return (
-    // TODO: change to router link
-    <a href={link}>
+    <Link to={link}>
       <Card className='mb-3 text-left'>
         <Card.Body>
           <Card.Title>{head}</Card.Title>
@@ -16,7 +16,7 @@ const ListItem = props => {
           </Card.Subtitle>
         </Card.Body>
       </Card>
-    </a>
+    </Link>
   );
 };
 

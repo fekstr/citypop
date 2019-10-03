@@ -8,7 +8,7 @@ const List = props => {
   return (
     <ul>
       {items.map(item => (
-        <ListItem key={item.id} head={item.head} sub1={item.sub1} sub2={item.sub2} link={item.link} />
+        <ListItem key={item.key} head={item.head} sub1={item.sub1} sub2={item.sub2} link={item.link} />
       ))}
     </ul>
   );

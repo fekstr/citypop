@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AACE,wBADsB,CACtB,OAAO,CAAC;EACN,UAAU,EAAE,GAAG;EACf,aAAa,EAAE,GAAG;CACnB;;AAJH,AAME,wBANsB,CAMtB,QAAQ,CAAC;EACP,UAAU,EAAE,GAAG;CAChB",
+    "mappings": "AAAA,AACE,wBADsB,CACtB,cAAc,CAAC;EACb,aAAa,EAAE,GAAG;CACnB;;AAHH,AAKE,wBALsB,CAKtB,QAAQ,CAAC;EACP,UAAU,EAAE,GAAG;CAChB",
     "sources": [
         "countryResultsContainer.scss"
     ],
