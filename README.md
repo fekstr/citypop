@@ -9,6 +9,7 @@ CityPop is a web app for searching city populations in the geonames database.
 ## Prerequisites
 
 - Node.js
+- Sass (if updating stylesheets)
 
 ## Installation
 
