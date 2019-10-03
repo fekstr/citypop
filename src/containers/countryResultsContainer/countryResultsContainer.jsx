@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { getCities } from '../../services/countryService';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Button } from 'react-bootstrap';
 import { ClipLoader } from 'react-spinners';
+import { Link } from 'react-router-dom';
 import List from '../../components/common/List/list';
 import queryString from 'query-string';
 import _ from 'lodash';
@@ -10,10 +11,12 @@ import './countryResultsContainer.css';
 class CountryResultsContainer extends Component {
   state = {
     result: {},
+    query: '',
   };
 
   async componentDidMount() {
     const query = queryString.parse(this.props.location.search);
+    this.setState({ query: query.q });
     const result = await getCities(query.q);
     this.setState({ result });
   }
@@ -37,7 +40,17 @@ class CountryResultsContainer extends Component {
   }
 
   renderList() {
-    console.log(this.state.result);
+    if (this.state.result === 'Not found') {
+      return (
+        <React.Fragment>
+          <h3 className='mb-4'>No country found for '{this.state.query}'</h3>
+          <Link to='/city'>
+            <Button size='lg'>Back to search</Button>
+          </Link>
+        </React.Fragment>
+      );
+    }
+
     const items = this.state.result.map(city => {
       return {
         key: city.geonameId,

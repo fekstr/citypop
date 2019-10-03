@@ -6,6 +6,7 @@ const ListItem = props => {
   const { head, sub1, sub2, link } = props;
 
   return (
+    // TODO: change to router link
     <a href={link}>
       <Card className='mb-3 text-left'>
         <Card.Body>

@@ -9,7 +9,8 @@ export async function getCities(cityName) {
   console.log(response);
   const cities = getCityData(response.data.geonames);
   console.log(cities);
-  return cities;
+  if (cities.length > 0) return cities;
+  return 'Not found';
 }
 
 export async function getCityById(geonameId) {
